@@ -1,0 +1,56 @@
+{
+    "id": "WebDAV",
+    "name": "WebDAV 网络磁盘",
+    "title": "WebDAV 网络磁盘",
+    "version": "1.0.0",
+    "source": {
+        "icon": "{{pluginHost}}static/images/icon.png"
+    },
+    "category": "tools,file",
+    "description": "把 KodExplorer 个人空间映射为 WebDAV 网络磁盘：支持 Windows/macOS、读写、Range、锁、回收站与账号权限。",
+    "keywords": "webdav,network drive,网络磁盘,挂载,netdrive",
+    "auther": {
+        "copyright": "KodExplorer WebDAV plugin",
+        "homePage": ""
+    },
+    "configItem": {
+        "pluginAuth": {
+            "type": "userSelect",
+            "value": "all:1",
+            "display": "{{LNG.Plugin.config.auth}}",
+            "desc": "{{LNG.Plugin.config.authDesc}}",
+            "require": 1
+        },
+        "readonly": {
+            "type": "switch",
+            "display": "只读模式",
+            "desc": "开启后 WebDAV 只能读取和下载，不能上传、修改、删除或新建文件夹",
+            "value": "0"
+        },
+        "recycle": {
+            "type": "switch",
+            "display": "删除到回收站",
+            "desc": "WebDAV 删除的文件移入 KodExplorer 回收站；关闭后直接永久删除",
+            "value": "1"
+        },
+        "maxDepth": {
+            "type": "number",
+            "display": "PROPFIND 最大深度",
+            "desc": "客户端请求 Depth: infinity 时的最大递归层数，避免超大目录拖慢服务器",
+            "value": 3
+        },
+        "maxItems": {
+            "type": "number",
+            "display": "单次列目录上限",
+            "desc": "一次 PROPFIND 最多返回的文件/文件夹数量，建议 2000-10000",
+            "value": 5000
+        },
+        "forceHttps": {
+            "type": "switch",
+            "display": "强制 HTTPS",
+            "desc": "开启后 HTTP 请求会被拒绝。WebDAV 使用 Basic Auth，公网访问强烈建议开启",
+            "value": "0"
+        },
+        "step001": "<hr/>"
+    }
+}

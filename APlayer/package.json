@@ -1,0 +1,56 @@
+{
+    "id": "APlayer",
+    "name": "APlayer音乐播放器",
+    "title": "APlayer音乐播放器",
+    "version": "1.1.1",
+    "source": {
+        "icon": "{{pluginHost}}static/images/icon.png"
+    },
+    "category": "media,file",
+    "description": "沉浸式音乐播放器：极速直连播放、动态封面、歌词同步与播放列表，兼容 FLAC/M4A/AAC。",
+    "keywords": "aplayer,music,audio,flac,mp3,lyrics",
+    "auther": {
+        "copyright": "APlayer plugin",
+        "homePage": "https://aplayer.js.org/"
+    },
+    "configItem": {
+        "pluginAuth": {
+            "type": "userSelect",
+            "value": "all:1",
+            "display": "{{LNG.Plugin.config.auth}}",
+            "desc": "{{LNG.Plugin.config.authDesc}}",
+            "require": 1
+        },
+        "autoplay": {
+            "type": "switch",
+            "display": "自动播放",
+            "desc": "打开音乐后自动播放",
+            "value": "1"
+        },
+        "lyric": {
+            "type": "switch",
+            "display": "自动加载歌词",
+            "desc": "自动加载与音乐同目录、同名的 .lrc 歌词文件",
+            "value": "1"
+        },
+        "cover": {
+            "type": "switch",
+            "display": "自动加载封面",
+            "desc": "自动加载与音乐同名的 .jpg，或同目录下的 cover.jpg 作为封面",
+            "value": "1"
+        },
+        "step001": "<hr/>",
+        "fileSort": {
+            "type": "number",
+            "display": "{{LNG.Plugin.Config.fileSort}}",
+            "desc": "{{LNG.Plugin.Config.fileSortDesc}}",
+            "value": 50
+        },
+        "fileExt": {
+            "type": "tags",
+            "display": "{{LNG.Plugin.Config.fileExt}}",
+            "desc": "{{LNG.Plugin.Config.fileExtDesc}}",
+            "value": "mp3,wav,m4a,aac,flac,ogg,oga,opus"
+        }
+    }
+}

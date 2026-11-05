@@ -1,0 +1,56 @@
+{
+    "id": "ArtPlayer",
+    "name": "ArtPlayer播放器",
+    "title": "ArtPlayer播放器",
+    "version": "1.0.0",
+    "source": {
+        "icon": "{{pluginHost}}static/images/icon.png"
+    },
+    "category": "media,file",
+    "description": "基于 ArtPlayer 的视频播放器，支持 HLS、FLV、字幕和弹幕。",
+    "keywords": "artplayer,video,hls,flv,danmaku,subtitle",
+    "auther": {
+        "copyright": "ArtPlayer plugin",
+        "homePage": "https://artplayer.org/"
+    },
+    "configItem": {
+        "pluginAuth": {
+            "type": "userSelect",
+            "value": "all:1",
+            "display": "{{LNG.Plugin.config.auth}}",
+            "desc": "{{LNG.Plugin.config.authDesc}}",
+            "require": 1
+        },
+        "autoplay": {
+            "type": "switch",
+            "display": "自动播放",
+            "desc": "打开视频后自动播放",
+            "value": "1"
+        },
+        "subtitle": {
+            "type": "switch",
+            "display": "自动加载字幕",
+            "desc": "自动加载与视频文件同目录、同名的 .vtt 字幕文件",
+            "value": "0"
+        },
+        "danmaku": {
+            "type": "switch",
+            "display": "弹幕",
+            "desc": "开启弹幕功能；弹幕保存在当前浏览器，并按文件路径区分",
+            "value": "1"
+        },
+        "step001": "<hr/>",
+        "fileSort": {
+            "type": "number",
+            "display": "{{LNG.Plugin.Config.fileSort}}",
+            "desc": "{{LNG.Plugin.Config.fileSortDesc}}",
+            "value": 300
+        },
+        "fileExt": {
+            "type": "tags",
+            "display": "{{LNG.Plugin.Config.fileExt}}",
+            "desc": "{{LNG.Plugin.Config.fileExtDesc}}",
+            "value": "mp4,m4v,mov,webm,ogv,ogg,flv,f4v,m3u8,mkv"
+        }
+    }
+}
